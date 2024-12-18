@@ -1,18 +1,21 @@
 import { useParams } from "react-router-dom";
 import { Card } from "@/components/ui/card";
+import { states } from "./States"; // Import the states array
 
 const StateDetail = () => {
   const { stateId } = useParams();
   
-  // This would typically come from an API
-  const stateData = {
-    name: "Tamil Nadu",
-    description: "Tamil Nadu is renowned for its classical arts, rich literature, and architectural heritage.",
-    culture: "The cultural heritage of Tamil Nadu dates back to the ancient period. The state is famous for its classical dance form Bharatanatyam, Carnatic music, and temple architecture.",
-    festivals: ["Pongal", "Thai Pongal", "Thaipusam"],
-    cuisine: ["Dosa", "Idli", "Sambar", "Rasam"],
-    image: "/placeholder.svg"
-  };
+  const stateData = states.find(state => state.id === stateId);
+
+  if (!stateData) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <Card className="glass-card p-8">
+          <h1 className="text-4xl font-bold text-cultural-maroon">State not found</h1>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
