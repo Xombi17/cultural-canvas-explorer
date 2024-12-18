@@ -349,7 +349,7 @@ const States = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-cultural-maroon mb-8 text-center animate-fade-up">
+      <h1 className="text-4xl font-bold text-cultural-maroon mb-8 text-center animate-fade-up hover:text-shadow-glow transition-all duration-300">
         Explore Indian States
       </h1>
       
@@ -372,11 +372,11 @@ const States = () => {
                 alt={state.name}
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="state-card-content">
-                <h3 className="text-2xl font-semibold text-white mb-2">
+              <div className="state-card-content p-4 bg-white/90">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-2 hover:text-shadow-glow transition-all duration-300">
                   {state.name}
                 </h3>
-                <p className="text-white/90">
+                <p className="text-gray-700 hover:text-shadow-glow transition-all duration-300">
                   {state.description}
                 </p>
               </div>
