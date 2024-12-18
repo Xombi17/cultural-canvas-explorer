@@ -14,16 +14,63 @@ const states: State[] = [
   {
     id: "tamil-nadu",
     name: "Tamil Nadu",
-    description: "Known for its Dravidian-style temples, classical dance forms, and rich cultural heritage.",
-    image: "/placeholder.svg"
+    description: "Known for its magnificent Dravidian temples, classical Bharatanatyam dance, and vibrant Carnatic music tradition.",
+    image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800"
   },
   {
     id: "rajasthan",
     name: "Rajasthan",
-    description: "Famous for its majestic palaces, colorful festivals, and vibrant desert culture.",
-    image: "/placeholder.svg"
+    description: "Home to majestic palaces, colorful festivals, and the Thar Desert's rich cultural heritage.",
+    image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800"
   },
-  // Add more states here
+  {
+    id: "kerala",
+    name: "Kerala",
+    description: "Famous for its backwaters, Kathakali dance form, and traditional Ayurvedic practices.",
+    image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "gujarat",
+    name: "Gujarat",
+    description: "Renowned for its vibrant Garba dance, traditional textiles, and the Great Rann of Kutch.",
+    image: "https://images.unsplash.com/photo-1609948543911-0aa1c6dd1c13?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "west-bengal",
+    name: "West Bengal",
+    description: "Known for Durga Puja celebrations, Bengali literature, and rich artistic traditions.",
+    image: "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "maharashtra",
+    name: "Maharashtra",
+    description: "Home to the vibrant city of Mumbai, Warli art, and the ancient Ajanta and Ellora caves.",
+    image: "https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "punjab",
+    name: "Punjab",
+    description: "Famous for Bhangra dance, rich cuisine, and the Golden Temple of Amritsar.",
+    image: "https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "uttar-pradesh",
+    name: "Uttar Pradesh",
+    description: "Home to the Taj Mahal, rich Mughal heritage, and the holy city of Varanasi.",
+    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "karnataka",
+    name: "Karnataka",
+    description: "Known for its tech hub Bangalore, Mysore Palace, and classical Carnatic music.",
+    image: "https://images.unsplash.com/photo-1600850056064-a8b380df8395?auto=format&fit=crop&w=800"
+  },
+  {
+    id: "madhya-pradesh",
+    name: "Madhya Pradesh",
+    description: "Famous for Khajuraho temples, tribal art, and the ancient city of Sanchi.",
+    image: "https://images.unsplash.com/photo-1624363414774-92d00d476abb?auto=format&fit=crop&w=800"
+  }
 ];
 
 const States = () => {
@@ -35,7 +82,7 @@ const States = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-cultural-maroon mb-8 text-center">
+      <h1 className="text-4xl font-bold text-cultural-maroon mb-8 text-center animate-fade-up">
         Explore Indian States
       </h1>
       
