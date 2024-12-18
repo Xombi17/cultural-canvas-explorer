@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import Home from "./pages/Home";
+import States from "./pages/States";
+import StateDetail from "./pages/StateDetail";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ const App = () => (
           <main className="pt-16">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/states" element={<States />} />
+              <Route path="/states/:stateId" element={<StateDetail />} />
             </Routes>
           </main>
         </div>
