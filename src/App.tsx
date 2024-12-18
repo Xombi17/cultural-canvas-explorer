@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import States from "./pages/States";
 import StateDetail from "./pages/StateDetail";
 
+
 const queryClient = new QueryClient();
 
 const App = () => (

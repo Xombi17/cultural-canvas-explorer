@@ -108,7 +108,7 @@ export const states: State[] = [
     id: "jharkhand",
     name: "Jharkhand",
     description: "Known for its rich mineral resources and tribal culture.",
-    image: "https://www.newsclick.in/sites/default/files/styles/responsive_885/public/2019-11/jharkhand%20minerals.jpg%20cover.jpg?itok=wZSCCA3P",
+    image: "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/06/10/691545-iron-ore-mine.jpg",
     culture: "Home to various tribal communities with unique traditions.",
     festivals: ["Sarhul", "Karam", "Tiranga"],
     cuisine: ["Thekua", "Litti", "Pitha"]
@@ -297,7 +297,7 @@ export const states: State[] = [
     id: "dadra-and-nagar-haveli",
     name: "Dadra and Nagar Haveli",
     description: "Known for its lush greenery and tribal culture.",
-    image: "https://www.researchgate.net/profile/A-Balasubramanian/publication/320735608/figure/fig2/AS:614067542691843@1523416519080/figure-fig2_Q320.jpg",
+    image: "https://vushii.com/uploads/548362383_Dadra%20and%20Nagar%20Haveli.jpg",
     culture: "Famous for its tribal art and crafts.",
     festivals: ["Holi", "Diwali"],
     cuisine: ["Dhokla", "Farsan"]
