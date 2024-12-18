@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const Home = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,22 +22,35 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <div className="relative h-screen overflow-hidden">
-        <div
-          ref={heroRef}
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop')] bg-cover bg-center"
-        />
-        <div className="absolute inset-0 bg-black/50" />
+        <div ref={heroRef} className="absolute inset-0">
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source
+              src="https://player.vimeo.com/external/517090081.hd.mp4?s=88cdcc5d5c9e56696fa67e561ada5a6f38f48c68&profile_id=175&oauth2_token_id=57447761"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 backdrop-blur-[2px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.4)_100%)]" />
+        </div>
         <div className="relative h-full flex items-center justify-center text-center">
           <div className="max-w-4xl px-4 animate-fade-up">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 [text-shadow:_2px_2px_10px_rgb(0_0_0_/_90%)]">
               Discover India's Rich Cultural Heritage
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8">
+            <p className="text-lg md:text-xl text-white/90 mb-8 [text-shadow:_1px_1px_5px_rgb(0_0_0_/_90%)]">
               Explore the diverse traditions, art, and history of India's vibrant states
             </p>
             <Button
               asChild
-              className="bg-cultural-gold hover:bg-cultural-gold/90 text-black"
+              className="bg-cultural-gold hover:bg-cultural-gold/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <Link to="/states">
                 Explore States
