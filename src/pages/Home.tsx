@@ -32,30 +32,30 @@ const Home = () => {
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source
-              src="https://player.vimeo.com/external/517090081.hd.mp4?s=88cdcc5d5c9e56696fa67e561ada5a6f38f48c68&profile_id=175&oauth2_token_id=57447761"
+              src="/hey.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 backdrop-blur-[2px]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.4)_100%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.2)_100%)]" />
         </div>
-        <div className="relative h-full flex items-center justify-center text-center">
-          <div className="max-w-4xl px-4 animate-fade-up">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 [text-shadow:_2px_2px_10px_rgb(0_0_0_/_90%)]">
-              Discover India's Rich Cultural Heritage
+        <div className="relative h-full flex items-center text-left">
+          <div className="max-w-4xl px-8 animate-fade-up">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 [text-shadow:_2px_2px_10px_rgb(0_0_0_/_90%)] hover:[text-shadow:_2px_2px_15px_rgb(255_255_255_/_50%)] transition-all duration-300">
+              Discover India's Rich <br /> Cultural Heritage
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mb-8 [text-shadow:_1px_1px_5px_rgb(0_0_0_/_90%)]">
-              Explore the diverse traditions, art, and history of India's vibrant states
+            <p className="text-lg md:text-xl text-white/90 mb-8 [text-shadow:_1px_1px_5px_rgb(0_0_0_/_90%)] hover:[text-shadow:_1px_1px_10px_rgb(255_255_255_/_40%)] transition-all duration-300">
+            Explore the rich cultural heritage, traditions, and diversity of India's states<br /> and territories through our interactive journey.
             </p>
             <Button
               asChild
               className="bg-cultural-gold hover:bg-cultural-gold/90 text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
-              <Link to="/states">
-                Explore States
+              <a href="https://xombi17-streamlit-map-cultural-map-xpfuqj.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                Explore Map
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
@@ -63,7 +63,7 @@ const Home = () => {
 
       <section className="py-24 bg-cultural-cream">
         <div className="container px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-left mb-16 [text-shadow:_1px_1px_2px_rgba(0,0,0,0.1)] hover:[text-shadow:_1px_1px_8px_rgba(0,0,0,0.2)] transition-all duration-300">
             Featured States
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -79,10 +79,10 @@ const Home = () => {
                   className="w-full h-[400px] object-cover"
                 />
                 <div className="state-card-content">
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2 [text-shadow:_1px_1px_3px_rgba(0,0,0,0.5)] group-hover:[text-shadow:_1px_1px_10px_rgba(255,255,255,0.5)] transition-all duration-300">
                     {state.name}
                   </h3>
-                  <p className="text-white/90">{state.description}</p>
+                  <p className="text-white/90 [text-shadow:_1px_1px_2px_rgba(0,0,0,0.5)] group-hover:[text-shadow:_1px_1px_8px_rgba(255,255,255,0.4)] transition-all duration-300">{state.description}</p>
                 </div>
               </Link>
             ))}
@@ -92,11 +92,11 @@ const Home = () => {
 
       <section className="py-24 cultural-pattern">
         <div className="container px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+          <div className="max-w-3xl mx-auto text-left">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 [text-shadow:_1px_1px_2px_rgba(0,0,0,0.1)] hover:[text-shadow:_1px_1px_8px_rgba(0,0,0,0.2)] transition-all duration-300">
               Experience India's Living Heritage
             </h2>
-            <p className="text-lg text-muted-foreground mb-12">
+            <p className="text-lg text-muted-foreground mb-12 [text-shadow:_1px_1px_1px_rgba(0,0,0,0.1)] hover:[text-shadow:_1px_1px_6px_rgba(0,0,0,0.15)] transition-all duration-300">
               From ancient temples to vibrant festivals, immerse yourself in the
               cultural tapestry that makes India unique.
             </p>
