@@ -339,7 +339,6 @@ export const states: State[] = [
     cuisine: ["Seafood", "Pondicherry Curry"]
   }
 ];
-
 const States = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -348,41 +347,42 @@ const States = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-cultural-maroon mb-8 text-center animate-fade-up hover:text-shadow-glow transition-all duration-300">
-        Explore Indian States
-      </h1>
-      
-      <div className="max-w-xl mx-auto mb-12">
-        <Input
-          type="search"
-          placeholder="Search states..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full"
-        />
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-purple-950">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white mb-8 text-center animate-fade-up hover:text-cultural-gold hover:[text-shadow:_0_0_15px_rgba(255,215,0,0.6)] transition-all duration-300">
+          Explore Indian States
+        </h1>
+        <div className="max-w-xl mx-auto mb-12">
+          <Input
+            type="search"
+            placeholder="Search states..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full"
+          />
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredStates.map((state) => (
-          <Link to={`/states/${state.id}`} key={state.id}>
-            <Card className="state-card overflow-hidden group">
-              <img
-                src={state.image}
-                alt={state.name}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="state-card-content p-4 bg-white/90">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-2 hover:text-shadow-glow transition-all duration-300">
-                  {state.name}
-                </h3>
-                <p className="text-gray-700 hover:text-shadow-glow transition-all duration-300">
-                  {state.description}
-                </p>
-              </div>
-            </Card>
-          </Link>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredStates.map((state) => (
+            <Link to={`/states/${state.id}`} key={state.id}>
+              <Card className="state-card overflow-hidden group">
+                <img
+                  src={state.image}
+                  alt={state.name}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="state-card-content p-4 bg-white/90">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2 hover:text-shadow-glow transition-all duration-300">
+                    {state.name}
+                  </h3>
+                  <p className="text-gray-700 hover:text-shadow-glow transition-all duration-300">
+                    {state.description}
+                  </p>
+                </div>
+              </Card>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
