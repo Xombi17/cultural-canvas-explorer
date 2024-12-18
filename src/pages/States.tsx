@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
-interface State {
+export interface State {
   id: string;
   name: string;
   description: string;
@@ -13,7 +13,7 @@ interface State {
   cuisine: string[];
 }
 
-const states: State[] = [
+export const states: State[] = [
   {
     id: "andhra-pradesh",
     name: "Andhra Pradesh",

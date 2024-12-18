@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Card } from "@/components/ui/card";
-import { states } from "./States"; // Import the states array
+import { states } from "./States";
 
 const StateDetail = () => {
   const { stateId } = useParams();
